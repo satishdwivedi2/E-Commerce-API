@@ -10,3 +10,17 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:8080/verify-otp?phoneNo=2753513914&otp=1207
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "john.doe4@gmail.com",
+    "password": "pass@123"
+}
+###
+
+GET http://localhost:8080/login/test
+Authorization: Bearer eyJraWQiOiJGTDVfZ2U0Y01WdWwzN0t0a1czM2IyVEZwcEExcmY0SlV0NHgyYlE5bU40IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE3OTA0MTc4ODQsInN1YiI6ImpvaG4uZG9lNEBnbWFpbC5jb20iLCJpYXQiOjE3OTA0MTQyODR9.cahgnXqjQt74zKvBO773s8YTr7Hz1P_OEOQlt03eUrU
