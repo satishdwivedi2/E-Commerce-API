@@ -1,0 +1,12 @@
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+
+{    
+    "name": "John Doe4",
+    "email": "john.doe4@gmail.com",
+    "phoneNo": "2753513914",
+    "password": "pass@123"
+}
+###
+POST http://localhost:8080/verify-otp?phoneNo=2753513914&otp=1207
