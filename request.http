@@ -3,13 +3,13 @@ Content-Type: application/json
 
 
 {    
-    "name": "John Doe4",
-    "email": "john.doe4@gmail.com",
-    "phoneNo": "2753513914",
+    "name": "John Doe5",
+    "email": "john.doe5@gmail.com",
+    "phoneNo": "9547513914",
     "password": "pass@123"
 }
 ###
-POST http://localhost:8080/verify-otp?phoneNo=2753513914&otp=1207
+POST http://localhost:8080/verify-otp?phoneNo=9547513914&otp=3503
 
 ###
 
@@ -17,10 +17,72 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "email": "john.doe4@gmail.com",
+    "email": "john.doe5@gmail.com",
     "password": "pass@123"
 }
 ###
 
 GET http://localhost:8080/login/test
-Authorization: Bearer eyJraWQiOiJGTDVfZ2U0Y01WdWwzN0t0a1czM2IyVEZwcEExcmY0SlV0NHgyYlE5bU40IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE3OTA0MTc4ODQsInN1YiI6ImpvaG4uZG9lNEBnbWFpbC5jb20iLCJpYXQiOjE3OTA0MTQyODR9.cahgnXqjQt74zKvBO773s8YTr7Hz1P_OEOQlt03eUrU
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODUyMzAsImlhdCI6MTc5MDQ4MTYzMH0.bobC_YtZmvuRBAjW5p88gm49uovnBACiS5ZdC4tMcTM
+
+###
+
+POST http://localhost:8080/categories
+Content-Type: application/json
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
+
+{
+    "name": "Clothing"
+}
+###
+GET http://localhost:8080/categories
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
+###
+
+DELETE http://localhost:8080/categories/3
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
+###
+PUT http://localhost:8080/categories/2
+Content-Type: application/json
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
+
+{
+    "name": "Kitchen Product"
+}
+###
+
+POST http://localhost:8080/products
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
+Content-Type: application/json
+
+{
+  "name": "Mobile",
+  "description": "RealMe",
+  "price": 18000,
+  "quntity": 5,
+  "category": {
+    "id": 1
+  }
+}
+###
+
+###
+GET http://localhost:8080/products
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
+###
+PUT http://localhost:8080/products/2
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
+Content-Type: application/json
+
+{
+    "name": "Mobile",
+  "description": "Realme",
+  "price": 55000,
+  "quntity": 10,
+  "category": {
+    "id": 1
+  }
+}
+###
+DELETE http://localhost:8080/products/2
+Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
