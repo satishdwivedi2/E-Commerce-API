@@ -5,33 +5,27 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity 
 @Getter 
-@Setter 
+@Setter
 @NoArgsConstructor 
-public class Product {
+public class CartItem {
     @Id 
     @GeneratedValue 
     private int id;
-    @NotBlank 
-    private String name;
-    @NotBlank
-    private String description;
     @Positive 
-    private int price;
-    @PositiveOrZero 
     private int quantity;
+    @ManyToOne
+    @JoinColumn(name="product_id")
+    private Product product; 
     @ManyToOne 
-    @JoinColumn(name="category_id")
-    private Category category;
-
+    @JoinColumn(name="cart_id")
+    private Cart cart;
 
 
 }

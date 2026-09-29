@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.ecommerce.entity.Category;
 import com.example.ecommerce.service.CategoryService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RequestMapping("/categories")
@@ -23,7 +24,7 @@ public class CategoryController {
    private final CategoryService categoryService;
 
    @PostMapping
-   public Category createCategory(@RequestBody Category category) {
+   public Category createCategory(@Valid @RequestBody Category category) {
        return categoryService.createCategory(category);
    }
 
@@ -37,7 +38,7 @@ public class CategoryController {
    }
    
    @PutMapping("/{id}")
-   public Category updateCategory(@PathVariable int id, @RequestBody Category category) {
+   public Category updateCategory(@Valid @PathVariable int id, @RequestBody Category category) {
        return categoryService.updateCategory(id, category.getName());
    }
    @DeleteMapping ("/{id}")

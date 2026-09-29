@@ -36,18 +36,17 @@ Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTE
 }
 ###
 GET http://localhost:8080/categories
-Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
-###
+Authorization: Bearer eyJraWQiOiJMV096aThhV1pvajgzb1phajhHUTFHUjlCVXFGdWJiYjdSc2F1VTNabUkwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA1NzcxODUsImlhdCI6MTc5MDU3MzU4NX0.VGyFoHDY8ISgofr9bLgy03YBqjzK-F2jIepTfF6im3o
 
 DELETE http://localhost:8080/categories/3
 Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
 ###
 PUT http://localhost:8080/categories/2
 Content-Type: application/json
-Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0ODkxMjcsImlhdCI6MTc5MDQ4NTUyN30.S_rwoAeTVqfK7YyrSFTguN2Z9ilf_5jpFalQzKGNMok
+Authorization: Bearer eyJraWQiOiJMV096aThhV1pvajgzb1phajhHUTFHUjlCVXFGdWJiYjdSc2F1VTNabUkwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA1NzcxODUsImlhdCI6MTc5MDU3MzU4NX0.VGyFoHDY8ISgofr9bLgy03YBqjzK-F2jIepTfF6im3o
 
 {
-    "name": "Kitchen Product"
+    "name": "Home Product"
 }
 ###
 
@@ -70,15 +69,15 @@ Content-Type: application/json
 GET http://localhost:8080/products
 Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
 ###
-PUT http://localhost:8080/products/2
-Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
+PUT http://localhost:8080/products/1
+Authorization: Bearer eyJraWQiOiJMV096aThhV1pvajgzb1phajhHUTFHUjlCVXFGdWJiYjdSc2F1VTNabUkwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTRAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzkwNTc3MzQ2LCJpYXQiOjE3OTA1NzM3NDZ9.pl5KZiOmGbOAwe1I7eOQZ54kfBRCZsTlLZSTFCfXQi4
 Content-Type: application/json
 
 {
     "name": "Mobile",
   "description": "Realme",
-  "price": 55000,
-  "quntity": 10,
+  "price": 15000,
+  "quantity": 10,
   "category": {
     "id": 1
   }
@@ -86,3 +85,44 @@ Content-Type: application/json
 ###
 DELETE http://localhost:8080/products/2
 Authorization: Bearer eyJraWQiOiJKc0R6cV92UGh1ZjBUVy1aejZCbGpxZDZVMWw4bTliejJHTEpqVkxKV1kwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA0OTUzODAsImlhdCI6MTc5MDQ5MTc4MH0.-EiezBkHra0i5XyFANaXXafYH3Il21W75of6aJ7Q8SE
+###
+GET http://localhost:8080/products/search?name=laptop
+Authorization: Bearer eyJraWQiOiJMV096aThhV1pvajgzb1phajhHUTFHUjlCVXFGdWJiYjdSc2F1VTNabUkwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA1NzE2OTMsImlhdCI6MTc5MDU2ODA5M30.WM7D3TiNiR7Y1fwrpY2ZcR75x2yGWUvCK6sWjOmnVsQ
+###
+GET http://localhost:8080/products/category/1
+Authorization: Bearer eyJraWQiOiJMV096aThhV1pvajgzb1phajhHUTFHUjlCVXFGdWJiYjdSc2F1VTNabUkwIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA1NzE2OTMsImlhdCI6MTc5MDU2ODA5M30.WM7D3TiNiR7Y1fwrpY2ZcR75x2yGWUvCK6sWjOmnVsQ
+###
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "john.doe4@gmail.com",
+    "password": "pass@123"
+}
+
+###
+POST http://localhost:8080/cart-items/1/1/2
+Authorization: Bearer eyJraWQiOiJ5R0ZDQXFhY1NIZmdzTThyV1VQeHU3NGU3RzZtOGpKV1NRcTZvTGhjSEd3IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA2NTczNjMsImlhdCI6MTc5MDY1Mzc2M30.PW0umW6Txl9kqmYXpCDHz7I-ARC0LU98Igyq_zh2bIQ
+###
+GET http://localhost:8080/cart-items/1
+Authorization: Bearer eyJraWQiOiJ5R0ZDQXFhY1NIZmdzTThyV1VQeHU3NGU3RzZtOGpKV1NRcTZvTGhjSEd3IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTRAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzkwNjU5MjQyLCJpYXQiOjE3OTA2NTU2NDJ9.JThlYOaPW0XJ9-Y3S8hh0lPwGblPnxNv4nN9feNw_Fw
+
+PUT http://localhost:8080/cart-items/1/1/5
+Authorization:Bearer eyJraWQiOiJ5R0ZDQXFhY1NIZmdzTThyV1VQeHU3NGU3RzZtOGpKV1NRcTZvTGhjSEd3IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTVAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJleHAiOjE3OTA2NTczNjMsImlhdCI6MTc5MDY1Mzc2M30.PW0umW6Txl9kqmYXpCDHz7I-ARC0LU98Igyq_zh2bIQ
+###
+POST http://localhost:8080/products
+Authorization: Bearer eyJraWQiOiJ5R0ZDQXFhY1NIZmdzTThyV1VQeHU3NGU3RzZtOGpKV1NRcTZvTGhjSEd3IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTRAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzkwNjU5MjQyLCJpYXQiOjE3OTA2NTU2NDJ9.JThlYOaPW0XJ9-Y3S8hh0lPwGblPnxNv4nN9feNw_Fw
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "Dell Laptop",
+  "price": 50000,
+  "quantity": 5,
+  "category": {
+    "id": 1
+  }
+}
+###
+DELETE http://localhost:8080/cart-items/1/1
+Authorization: Bearer eyJraWQiOiJ5R0ZDQXFhY1NIZmdzTThyV1VQeHU3NGU3RzZtOGpKV1NRcTZvTGhjSEd3IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb2huLmRvZTRAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzkwNjU5MjQyLCJpYXQiOjE3OTA2NTU2NDJ9.JThlYOaPW0XJ9-Y3S8hh0lPwGblPnxNv4nN9feNw_Fw

@@ -39,6 +39,12 @@ public class ProductService {
                 .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
         productRepository.deleteById(id);
     } 
+    public List<Product>getProductByName(String name){
+      return productRepository.findByNameContainingIgnoreCase(name);
+    }
+    public List<Product>getProductByCategoryId(int id){
+      return productRepository.findByCategoryId(id);
+    }
 
 
 }
